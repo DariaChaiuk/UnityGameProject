@@ -123,6 +123,11 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 23800000, guid: 8b505895f065440b6869c2a92ae0927c, type: 2}
+--- !u!1 &5176729 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5607819269926399345, guid: 45e0f06c750176947862c10346226439, type: 3}
+  m_PrefabInstance: {fileID: 652252853}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &41977610
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1364,6 +1369,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6b24a8b5ef504c6aaa1134fa6c02f5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  teleportCube: {fileID: 348189335}
+  teleportEffect: {fileID: 5176729}
 --- !u!65 &348189337
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3140,6 +3147,7 @@ GameObject:
   - component: {fileID: 715011615}
   - component: {fileID: 715011619}
   - component: {fileID: 715011620}
+  - component: {fileID: 715011621}
   m_Layer: 0
   m_Name: PLAYER_MAIN
   m_TagString: Player
@@ -3264,6 +3272,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ScoreAmount: 0
   ScoreText: {fileID: 978568262}
+  DesiredAmount: 2
+--- !u!114 &715011621
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 715011609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c9c6739a0ab545a68cda9cf0e8a0bbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &716192090
 PrefabInstance:
   m_ObjectHideFlags: 0

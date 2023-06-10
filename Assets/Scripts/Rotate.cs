@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Rotate : MonoBehaviour
 {
+    private Collect collectGold;
+    public GameObject messagePanel;
+    public float TimeAmount;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +25,18 @@ public class Rotate : MonoBehaviour
             Collect counter = other.GetComponent<Collect>();
             counter.ScoreAmount += 1;
             Destroy(gameObject);
+            StartCoroutine(ShowMessage(TimeAmount));
+        }
+    }
+
+    IEnumerator ShowMessage(float delay)
+    {
+        Debug.Log("show");
+        while (true)
+        {
+           messagePanel.SetActive(true);
+           yield return new WaitForSeconds(delay);
+           messagePanel.SetActive(false);
         }
     }
 }
