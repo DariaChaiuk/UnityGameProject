@@ -1,14 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
  
  
 public class PlayMenuScript : MonoBehaviour
 {
-// Start is called before the first frame update
+    public String CurrentLevel;
+
+    void Start()
+    {
+        CurrentLevel = "Scenes/Level_1";
+    }
+
     public void PlayGame()
     {
+        CurrentLevel = "Scenes/Level_1";
         SceneManager.LoadScene("Scenes/Level_1");
     }
     public void AboutGame()
@@ -28,10 +36,12 @@ public class PlayMenuScript : MonoBehaviour
     }
     public void Level1()
     {
+        CurrentLevel = "Scenes/Level_1";
         SceneManager.LoadScene("Scenes/Level_1");
     }
     public void Level2()
     {
+        CurrentLevel = "Scenes/Level_2";
         SceneManager.LoadScene("Scenes/Level_2");
     }
     public void ControlButtons()
@@ -43,5 +53,8 @@ public class PlayMenuScript : MonoBehaviour
         UnityEditor.EditorApplication.isPlaying = false;
         Debug.Log("We are quit");
         Application.Quit();
+    }
+    public void Resume(){
+        SceneManager.LoadScene(CurrentLevel);
     }
 }
